@@ -24,6 +24,7 @@
 ## 文件索引
 
 - **[report.md](report.md)** — 完整调研报告。时间线全貌、硬伤拆解、同类对比、抄袭争议。**从头读这个。**
+- **[v0.11-tracker.md](v0.11-tracker.md)** — 10 天追踪核实（2026-04-27）。v0.11.0 发布后逐项核实 10 项缺陷的修复状态。结论：核心缺陷几乎纹丝不动，evolution 模块被删除而非修复。
 - **[short-comment.md](short-comment.md)** — 短评。评论区/社媒发帖用，三分钟看完。
 - **[appendix-source-audit.md](appendix-source-audit.md)** — 源码审计。10 项缺陷的代码证据（文件路径 + 行号 + 代码片段）。
 - **[appendix-source-verification.md](appendix-source-verification.md)** — 源码核实记录。逐文件读取仓库源码的完整过程。

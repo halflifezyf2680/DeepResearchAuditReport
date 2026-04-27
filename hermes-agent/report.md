@@ -574,3 +574,5 @@ Nous Research 官方说："Hermes Agent is an overnight success nine months in t
 **框架对比**
 - Galileo AI：LangGraph/CrewAI/AutoGPT/Agents SDK 对比
 - Medium：LangGraph/CrewAI/AutoGPT 一手对比
+
+> 追踪更新见：[v0.11-tracker.md](./v0.11-tracker.md)（2026-04-27）
