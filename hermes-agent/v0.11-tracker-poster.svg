@@ -1,389 +1,429 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 3400" width="1200" height="3400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 2840" width="1200" height="2840">
   <defs>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#161b22"/>
-    </linearGradient>
-    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#f85149"/>
-      <stop offset="100%" stop-color="#ff7b72"/>
-    </linearGradient>
-    <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#d29922"/>
-      <stop offset="100%" stop-color="#e3b341"/>
-    </linearGradient>
-    <linearGradient id="greenGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#238636"/>
-      <stop offset="100%" stop-color="#2ea043"/>
-    </linearGradient>
-    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1f6feb"/>
-      <stop offset="100%" stop-color="#58a6ff"/>
-    </linearGradient>
     <linearGradient id="topBar" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#f85149"/>
-      <stop offset="50%" stop-color="#d29922"/>
-      <stop offset="100%" stop-color="#1f6feb"/>
+      <stop offset="0%" stop-color="#cf222e"/>
+      <stop offset="50%" stop-color="#bf8700"/>
+      <stop offset="100%" stop-color="#0969da"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="cardShadow" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#1f2328" flood-opacity="0.08"/>
     </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="1200" height="3400" fill="url(#bgGrad)" rx="0"/>
+  <rect width="1200" height="2840" fill="#f0f3f6"/>
 
   <!-- Top accent bar -->
   <rect x="0" y="0" width="1200" height="6" fill="url(#topBar)"/>
 
-  <!-- ═══════════════════════════════════════ CARD 1: 标题 + 背景 ═══════════════════════════════════════ -->
-  <g transform="translate(0, 40)">
-    <!-- Badge -->
-    <rect x="40" y="10" width="120" height="28" rx="14" fill="#f8514920" stroke="#f85149" stroke-width="1"/>
-    <text x="100" y="29" font-family="'SF Mono', 'JetBrains Mono', monospace" font-size="12" fill="#f85149" text-anchor="middle" font-weight="600">追踪核实</text>
+  <!-- ══════════════════════ CARD 1: 标题 + 背景 ══════════════════════ -->
+  <g transform="translate(0, 36)">
+    <rect x="32" y="0" width="1136" height="500" rx="12" fill="#ffffff" filter="url(#cardShadow)"/>
 
-    <text x="40" y="68" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="36" fill="#e6edf3" font-weight="800" letter-spacing="-0.5">Hermes Agent v0.11.0</text>
-    <text x="40" y="106" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="36" fill="#e6edf3" font-weight="800" letter-spacing="-0.5">10 天后，它"进化"了吗？</text>
+    <!-- Badge -->
+    <rect x="56" y="24" width="96" height="28" rx="14" fill="#ffebe9" stroke="#cf222e" stroke-width="1"/>
+    <text x="104" y="43" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#cf222e" text-anchor="middle" font-weight="600">追踪核实</text>
+
+    <text x="56" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="34" fill="#1f2328" font-weight="800" letter-spacing="-0.5">Hermes Agent v0.11.0</text>
+    <text x="56" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="34" fill="#1f2328" font-weight="800" letter-spacing="-0.5">10 天后，它"进化"了吗？</text>
 
     <!-- Divider -->
-    <line x1="40" y1="130" x2="1160" y2="130" stroke="#30363d" stroke-width="1"/>
+    <line x1="56" y1="150" x2="1144" y2="150" stroke="#d8dee4" stroke-width="1"/>
 
-    <!-- Stats row -->
-    <g transform="translate(0, 150)">
+    <!-- Stats row - 4 equal columns -->
+    <g transform="translate(56, 172)">
+      <!-- Col 1 -->
       <g>
-        <text x="40" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">2026-04-17</text>
-        <text x="40" y="22" font-family="'Inter', sans-serif" font-size="22" fill="#e6edf3" font-weight="700">81,000</text>
-        <text x="40" y="42" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">Stars</text>
+        <text x="0" y="0" font-family="'SF Mono', 'JetBrains Mono', Consolas, monospace" font-size="11" fill="#656d76">审计日期</text>
+        <text x="0" y="28" font-family="system-ui, sans-serif" font-size="24" fill="#1f2328" font-weight="700">2026-04-17</text>
+        <text x="0" y="48" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">初始 81,000 Stars</text>
       </g>
-      <g>
-        <text x="280" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">10 天后</text>
-        <text x="280" y="28" font-family="'Inter', sans-serif" font-size="28" fill="#f85149" font-weight="800">+31,000</text>
-        <text x="280" y="50" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">Stars 增长</text>
+      <!-- Col 2 -->
+      <g transform="translate(260, 0)">
+        <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">10 天后</text>
+        <text x="0" y="28" font-family="system-ui, sans-serif" font-size="24" fill="#cf222e" font-weight="800">+31,000 Stars</text>
+        <text x="0" y="48" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">38% 增长率</text>
       </g>
-      <g>
-        <text x="560" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">版本</text>
-        <text x="560" y="22" font-family="'Inter', sans-serif" font-size="22" fill="#e6edf3" font-weight="700">v0.10.0 → v0.11.0</text>
-        <text x="560" y="42" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">47 天 10 版</text>
+      <!-- Col 3 -->
+      <g transform="translate(520, 0)">
+        <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">版本跨度</text>
+        <text x="0" y="28" font-family="system-ui, sans-serif" font-size="24" fill="#1f2328" font-weight="700">v0.10 → v0.11</text>
+        <text x="0" y="48" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">47 天 · 10 个版本</text>
       </g>
-      <g>
-        <text x="880" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">v0.11.0 规模</text>
-        <text x="880" y="22" font-family="'Inter', sans-serif" font-size="22" fill="#e6edf3" font-weight="700">224K 行 / 761 PR</text>
-        <text x="880" y="42" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">482 bug fix PR</text>
+      <!-- Col 4 -->
+      <g transform="translate(780, 0)">
+        <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">v0.11.0 规模</text>
+        <text x="0" y="28" font-family="system-ui, sans-serif" font-size="24" fill="#1f2328" font-weight="700">224K 行 · 761 PR</text>
+        <text x="0" y="48" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">482 个 bug fix PR</text>
       </g>
     </g>
 
-    <!-- Context -->
-    <rect x="40" y="220" width="1120" height="100" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
-    <text x="60" y="248" font-family="'Inter', sans-serif" font-size="13" fill="#8b949e" font-weight="600">背景</text>
-    <text x="60" y="270" font-family="'Inter', sans-serif" font-size="13" fill="#c9d1d9">Nous Research 的 Hermes Agent 以"自我进化 AI Agent" 之名席卷开源社区，两个月 81k Star。我们逐行读了它的源码，</text>
-    <text x="60" y="290" font-family="'Inter', sans-serif" font-size="13" fill="#c9d1d9">发现 10 项核心缺陷全部未修复。10 天后 v0.11.0 发布，Star 涨到 112k——那这些缺陷修了吗？</text>
-    <text x="60" y="310" font-family="'Inter', sans-serif" font-size="13" fill="#8b949e" font-style="italic">详见 report.md + hermes-self-evolution-audit.md</text>
+    <!-- Context box -->
+    <rect x="56" y="264" width="1088" height="100" rx="8" fill="#f6f8fa" stroke="#d8dee4" stroke-width="1"/>
+    <text x="76" y="292" font-family="system-ui, sans-serif" font-size="13" fill="#656d76" font-weight="600">背景</text>
+    <text x="76" y="314" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328">Nous Research 的 Hermes Agent 以"自我进化 AI Agent" 之名席卷开源社区，两个月 81k Star。</text>
+    <text x="76" y="336" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328">我们逐行读了它的源码，发现 10 项核心缺陷。10 天后 v0.11.0 发布，Star 涨到 112k——那这些缺陷修了吗？</text>
+    <text x="76" y="356" font-family="system-ui, sans-serif" font-size="11" fill="#656d76" font-style="italic">详见 report.md + hermes-self-evolution-audit.md</text>
+
+    <!-- Version timeline -->
+    <g transform="translate(56, 388)">
+      <rect x="0" y="0" width="220" height="90" rx="8" fill="#ddf4ff"/>
+      <text x="16" y="22" font-family="'SF Mono', monospace" font-size="10" fill="#0969da" font-weight="600">v0.10.0</text>
+      <text x="16" y="42" font-family="system-ui, sans-serif" font-size="11" fill="#1f2328">审计基准版本</text>
+      <text x="16" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#1f2328">10 项核心缺陷确认</text>
+      <text x="16" y="78" font-family="'SF Mono', monospace" font-size="10" fill="#656d76">2026-04-17</text>
+      <g transform="translate(220, 0)">
+        <rect x="0" y="0" width="220" height="90" rx="8" fill="#fff8c5"/>
+        <text x="16" y="22" font-family="'SF Mono', monospace" font-size="10" fill="#9a6700" font-weight="600">v0.11.0</text>
+        <text x="16" y="42" font-family="system-ui, sans-serif" font-size="11" fill="#1f2328">追踪核实版本</text>
+        <text x="16" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#1f2328">761 PR · 224K 行代码</text>
+        <text x="16" y="78" font-family="'SF Mono', monospace" font-size="10" fill="#656d76">2026-04-23</text>
+      </g>
+      <g transform="translate(440, 0)">
+        <rect x="0" y="0" width="220" height="90" rx="8" fill="#ffebe9"/>
+        <text x="16" y="22" font-family="'SF Mono', monospace" font-size="10" fill="#cf222e" font-weight="600">2026-04-27</text>
+        <text x="16" y="42" font-family="system-ui, sans-serif" font-size="11" fill="#1f2328">追踪核实完成</text>
+        <text x="16" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#1f2328">0 彻底修复 · 2 部分修复</text>
+        <text x="16" y="78" font-family="system-ui, sans-serif" font-size="11" fill="#1f2328">4 代码删除 · 5 未修复</text>
+      </g>
+      <!-- Arrow -->
+      <line x1="440" y1="45" x2="456" y2="45" stroke="#656d76" stroke-width="1.5"/>
+      <polygon points="456,40 466,45 456,50" fill="#656d76"/>
+    </g>
   </g>
 
-  <!-- ═══════════════════════════════════════ CARD 2: 核心发现 ═══════════════════════════════════════ -->
-  <g transform="translate(0, 410)">
-    <!-- Card border -->
-    <rect x="30" y="0" width="1140" height="400" rx="12" fill="#161b22" stroke="#f8514940" stroke-width="1.5"/>
+  <!-- ══════════════════════ CARD 2: 核心发现 ══════════════════════ -->
+  <g transform="translate(0, 556)">
+    <rect x="32" y="0" width="1136" height="500" rx="12" fill="#ffffff" filter="url(#cardShadow)"/>
 
-    <!-- Section label -->
-    <rect x="50" y="20" width="180" height="28" rx="14" fill="#f8514920"/>
-    <text x="140" y="39" font-family="'Inter', sans-serif" font-size="13" fill="#f85149" text-anchor="middle" font-weight="700">核心发现</text>
+    <!-- Section badge -->
+    <rect x="56" y="24" width="96" height="28" rx="14" fill="#ffebe9"/>
+    <text x="104" y="43" font-family="system-ui, sans-serif" font-size="12" fill="#cf222e" text-anchor="middle" font-weight="600">核心发现</text>
 
     <!-- Big quote -->
-    <text x="50" y="80" font-family="'Inter', sans-serif" font-size="24" fill="#f85149" font-weight="800" filter="url(#glow)">"自我进化"代码被删除了。</text>
-    <text x="50" y="112" font-family="'Inter', sans-serif" font-size="15" fill="#e6edf3">不是修好了，是连同它的缺陷一起从主仓库清理掉了。</text>
+    <text x="56" y="88" font-family="system-ui, sans-serif" font-size="26" fill="#cf222e" font-weight="800">"自我进化"代码被删除了。</text>
+    <text x="56" y="118" font-family="system-ui, sans-serif" font-size="15" fill="#1f2328">不是修好了，是连同它的缺陷一起从主仓库清理掉了。</text>
 
-    <line x1="50" y1="130" x2="1150" y2="130" stroke="#30363d" stroke-width="1"/>
+    <line x1="56" y1="140" x2="1144" y2="140" stroke="#d8dee4" stroke-width="1"/>
 
     <!-- Key facts -->
-    <g transform="translate(50, 150)">
-      <circle cx="8" cy="8" r="4" fill="#f85149"/>
-      <text x="24" y="13" font-family="'Inter', sans-serif" font-size="14" fill="#e6edf3" font-weight="600">evolution/ 整个目录从主仓库消失</text>
+    <g transform="translate(56, 160)">
+      <circle cx="8" cy="-3" r="4" fill="#cf222e"/>
+      <text x="24" y="0" font-family="system-ui, sans-serif" font-size="14" fill="#1f2328" font-weight="600">evolution/ 整个目录从主仓库消失</text>
 
-      <circle cx="8" cy="40" r="4" fill="#f85149"/>
-      <text x="24" y="45" font-family="'Inter', sans-serif" font-size="14" fill="#e6edf3" font-weight="600">hermes-agent-self-evolution 子仓库也已不存在</text>
+      <circle cx="8" cy="32" r="4" fill="#cf222e"/>
+      <text x="24" y="35" font-family="system-ui, sans-serif" font-size="14" fill="#1f2328" font-weight="600">hermes-agent-self-evolution 子仓库也已不存在</text>
 
-      <circle cx="8" cy="72" r="4" fill="#f85149"/>
-      <text x="24" y="77" font-family="'Inter', sans-serif" font-size="14" fill="#e6edf3" font-weight="600">自进化变成"计划中功能"，社区 Feature Request 仍 OPEN（P3）</text>
+      <circle cx="8" cy="67" r="4" fill="#cf222e"/>
+      <text x="24" y="70" font-family="system-ui, sans-serif" font-size="14" fill="#1f2328" font-weight="600">自进化变成"计划中功能"，社区 Feature Request 仍 OPEN（P3）</text>
 
-      <circle cx="8" cy="104" r="4" fill="#d29922"/>
-      <text x="24" y="109" font-family="'Inter', sans-serif" font-size="14" fill="#e6edf3" font-weight="600">但 README 第一行仍是 "The self-improving AI agent"</text>
+      <circle cx="8" cy="102" r="4" fill="#bf8700"/>
+      <text x="24" y="105" font-family="system-ui, sans-serif" font-size="14" fill="#1f2328" font-weight="600">但 README 第一行仍是 "The self-improving AI agent"</text>
 
-      <circle cx="8" cy="136" r="4" fill="#d29922"/>
-      <text x="24" y="141" font-family="'Inter', sans-serif" font-size="14" fill="#e6edf3" font-weight="600">112,000 颗 Star + 营销叙事 → 代码现实差距进一步扩大</text>
+      <circle cx="8" cy="137" r="4" fill="#bf8700"/>
+      <text x="24" y="140" font-family="system-ui, sans-serif" font-size="14" fill="#1f2328" font-weight="600">112,000 颗 Star + 营销叙事 → 代码现实差距进一步扩大</text>
     </g>
 
-    <!-- Highlight box -->
-    <rect x="50" y="320" width="1100" height="60" rx="8" fill="#f8514910"/>
-    <text x="600" y="345" font-family="'Inter', sans-serif" font-size="15" fill="#f85149" text-anchor="middle" font-weight="700">10 项核心缺陷中：0 项彻底修复 · 2 项部分修复 · 3 项"代码已删除" · 5 项未修复</text>
-    <text x="600" y="368" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e" text-anchor="middle">"修复"方式是删除，而非改进。营销叙事与代码现实之间的差距在扩大而非缩小。</text>
+    <!-- Summary bar -->
+    <rect x="56" y="330" width="1088" height="56" rx="8" fill="#ffebe9"/>
+    <text x="600" y="354" font-family="system-ui, sans-serif" font-size="15" fill="#cf222e" text-anchor="middle" font-weight="700">10 项核心缺陷中：0 彻底修复 · 2 部分修复 · 3 "代码已删除" · 5 未修复</text>
+    <text x="600" y="374" font-family="'SF Mono', monospace" font-size="11" fill="#656d76" text-anchor="middle">"修复"方式是删除，而非改进。营销叙事与代码现实之间的差距在扩大而非缩小。</text>
+
+    <!-- Verdict visual -->
+    <g transform="translate(56, 410)">
+      <rect x="0" y="0" width="260" height="60" rx="8" fill="#ddf4ff"/>
+      <text x="130" y="24" font-family="system-ui, sans-serif" font-size="20" fill="#0969da" text-anchor="middle" font-weight="800">0</text>
+      <text x="130" y="44" font-family="system-ui, sans-serif" font-size="12" fill="#0969da" text-anchor="middle">彻底修复</text>
+      <rect x="280" y="0" width="260" height="60" rx="8" fill="#fff8c5"/>
+      <text x="410" y="24" font-family="system-ui, sans-serif" font-size="20" fill="#9a6700" text-anchor="middle" font-weight="800">2</text>
+      <text x="410" y="44" font-family="system-ui, sans-serif" font-size="12" fill="#9a6700" text-anchor="middle">部分修复</text>
+      <rect x="560" y="0" width="260" height="60" rx="8" fill="#fbefff"/>
+      <text x="690" y="24" font-family="system-ui, sans-serif" font-size="20" fill="#8250df" text-anchor="middle" font-weight="800">3</text>
+      <text x="690" y="44" font-family="system-ui, sans-serif" font-size="12" fill="#8250df" text-anchor="middle">代码删除</text>
+      <rect x="840" y="0" width="248" height="60" rx="8" fill="#ffebe9"/>
+      <text x="964" y="24" font-family="system-ui, sans-serif" font-size="20" fill="#cf222e" text-anchor="middle" font-weight="800">5</text>
+      <text x="964" y="44" font-family="system-ui, sans-serif" font-size="12" fill="#cf222e" text-anchor="middle">未修复</text>
+    </g>
   </g>
 
-  <!-- ═══════════════════════════════════════ CARD 3: 10 项缺陷判定 ═══════════════════════════════════════ -->
-  <g transform="translate(0, 840)">
-    <rect x="30" y="0" width="1140" height="640" rx="12" fill="#161b22" stroke="#d2992240" stroke-width="1.5"/>
+  <!-- ══════════════════════ CARD 3: 10 项缺陷逐项判定 ══════════════════════ -->
+  <g transform="translate(0, 1076)">
+    <rect x="32" y="0" width="1136" height="700" rx="12" fill="#ffffff" filter="url(#cardShadow)"/>
 
-    <rect x="50" y="20" width="200" height="28" rx="14" fill="#d2992220"/>
-    <text x="150" y="39" font-family="'Inter', sans-serif" font-size="13" fill="#d29922" text-anchor="middle" font-weight="700">10 项缺陷逐项判定</text>
+    <!-- Section badge -->
+    <rect x="56" y="24" width="140" height="28" rx="14" fill="#fff8c5"/>
+    <text x="126" y="43" font-family="system-ui, sans-serif" font-size="12" fill="#9a6700" text-anchor="middle" font-weight="600">10 项缺陷判定</text>
 
     <!-- Column headers -->
-    <g transform="translate(50, 68)">
-      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">#</text>
-      <text x="30" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e" font-weight="600">缺陷</text>
-      <text x="400" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e" font-weight="600">判定</text>
-      <text x="500" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e" font-weight="600">关键细节</text>
+    <g transform="translate(56, 72)">
+      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#656d76" font-weight="600">#</text>
+      <text x="32" y="0" font-family="system-ui, sans-serif" font-size="12" fill="#656d76" font-weight="600">缺陷名称</text>
+      <text x="280" y="0" font-family="system-ui, sans-serif" font-size="12" fill="#656d76" font-weight="600">判定</text>
+      <text x="400" y="0" font-family="system-ui, sans-serif" font-size="12" fill="#656d76" font-weight="600">关键细节</text>
     </g>
-    <line x1="50" y1="12" x2="1150" y2="12" stroke="#30363d" stroke-width="1"/>
+    <line x1="56" y1="82" x2="1144" y2="82" stroke="#d8dee4" stroke-width="1"/>
 
+    <!-- Defect rows: each 56px tall -->
     <!-- Defect 1 -->
-    <g transform="translate(50, 100)">
-      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">1</text>
-      <text x="30" y="0" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3">Skill 全量注入</text>
-      <rect x="400" y="-12" width="80" height="22" rx="4" fill="#d2992230"/>
-      <text x="440" y="4" font-family="'Inter', sans-serif" font-size="12" fill="#d29922" text-anchor="middle" font-weight="600">部分修复</text>
-      <text x="500" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">新增平台/工具集过滤，但仍无任务相关性过滤</text>
-      <text x="500" y="20" font-family="'SF Mono', monospace" font-size="10" fill="#6e7681">Issue #4379 #6839 #13332 全部 OPEN</text>
+    <g transform="translate(56, 98)">
+      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">1</text>
+      <text x="32" y="0" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="500">Skill 全量注入 (73% 冗余)</text>
+      <rect x="280" y="-12" width="72" height="22" rx="4" fill="#fff8c5"/>
+      <text x="316" y="4" font-family="system-ui, sans-serif" font-size="11" fill="#9a6700" text-anchor="middle" font-weight="600">部分修复</text>
+      <text x="400" y="0" font-family="system-ui, sans-serif" font-size="12" fill="#656d76">新增平台/工具集过滤，但仍无任务相关性过滤</text>
+      <text x="400" y="18" font-family="'SF Mono', monospace" font-size="10" fill="#8b949e">Issue #4379 #6839 #13332 全部 OPEN</text>
     </g>
-    <line x1="50" y1="34" x2="1150" y2="34" stroke="#21262d" stroke-width="0.5"/>
+    <line x1="56" y1="150" x2="1144" y2="150" stroke="#f0f3f6" stroke-width="1"/>
 
     <!-- Defect 2 -->
-    <g transform="translate(50, 155)">
-      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">2</text>
-      <text x="30" y="0" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3">自修改无确认</text>
-      <rect x="400" y="-12" width="48" height="22" rx="4" fill="#f8514930"/>
-      <text x="424" y="4" font-family="'Inter', sans-serif" font-size="12" fill="#f85149" text-anchor="middle" font-weight="600">未修复</text>
-      <text x="500" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">"patch it immediately" 原文保留，一字未改</text>
-      <text x="500" y="20" font-family="'SF Mono', monospace" font-size="10" fill="#6e7681">新增安全扫描器但默认关闭</text>
+    <g transform="translate(56, 160)">
+      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">2</text>
+      <text x="32" y="0" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="500">自修改无确认</text>
+      <rect x="280" y="-12" width="56" height="22" rx="4" fill="#ffebe9"/>
+      <text x="308" y="4" font-family="system-ui, sans-serif" font-size="11" fill="#cf222e" text-anchor="middle" font-weight="600">未修复</text>
+      <text x="400" y="0" font-family="system-ui, sans-serif" font-size="12" fill="#656d76">"patch it immediately" 原文保留，一字未改</text>
+      <text x="400" y="18" font-family="'SF Mono', monospace" font-size="10" fill="#8b949e">新增安全扫描器但默认关闭</text>
     </g>
-    <line x1="50" y1="34" x2="1150" y2="34" stroke="#21262d" stroke-width="0.5"/>
+    <line x1="56" y1="212" x2="1144" y2="212" stroke="#f0f3f6" stroke-width="1"/>
 
     <!-- Defect 3 -->
-    <g transform="translate(50, 210)">
-      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">3</text>
-      <text x="30" y="0" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3">词袋评分</text>
-      <rect x="400" y="-12" width="90" height="22" rx="4" fill="#8957e530"/>
-      <text x="445" y="4" font-family="'Inter', sans-serif" font-size="12" fill="#8957e5" text-anchor="middle" font-weight="600">代码删除</text>
-      <text x="500" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">evolution/ 目录从主仓库移除</text>
-      <text x="500" y="20" font-family="'SF Mono', monospace" font-size="10" fill="#6e7681">缺陷不再可触达，但未被真正修复</text>
+    <g transform="translate(56, 222)">
+      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">3</text>
+      <text x="32" y="0" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="500">词袋评分指标</text>
+      <rect x="280" y="-12" width="72" height="22" rx="4" fill="#fbefff"/>
+      <text x="316" y="4" font-family="system-ui, sans-serif" font-size="11" fill="#8250df" text-anchor="middle" font-weight="600">代码删除</text>
+      <text x="400" y="0" font-family="system-ui, sans-serif" font-size="12" fill="#656d76">evolution/ 目录从主仓库移除</text>
+      <text x="400" y="18" font-family="'SF Mono', monospace" font-size="10" fill="#8b949e">缺陷不再可触达，但未被真正修复</text>
     </g>
-    <line x1="50" y1="34" x2="1150" y2="34" stroke="#21262d" stroke-width="0.5"/>
+    <line x1="56" y1="274" x2="1144" y2="274" stroke="#f0f3f6" stroke-width="1"/>
 
     <!-- Defect 4 -->
-    <g transform="translate(50, 265)">
-      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">4</text>
-      <text x="30" y="0" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3">Pipeline no-op</text>
-      <rect x="400" y="-12" width="90" height="22" rx="4" fill="#8957e530"/>
-      <text x="445" y="4" font-family="'Inter', sans-serif" font-size="12" fill="#8957e5" text-anchor="middle" font-weight="600">代码删除</text>
-      <text x="500" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">self-evolution 子仓库已不存在</text>
-      <text x="500" y="20" font-family="'SF Mono', monospace" font-size="10" fill="#6e7681">Feature Request #10354 #11604 仍 OPEN (P3)</text>
+    <g transform="translate(56, 284)">
+      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">4</text>
+      <text x="32" y="0" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="500">Pipeline no-op</text>
+      <rect x="280" y="-12" width="72" height="22" rx="4" fill="#fbefff"/>
+      <text x="316" y="4" font-family="system-ui, sans-serif" font-size="11" fill="#8250df" text-anchor="middle" font-weight="600">代码删除</text>
+      <text x="400" y="0" font-family="system-ui, sans-serif" font-size="12" fill="#656d76">self-evolution 子仓库已不存在</text>
+      <text x="400" y="18" font-family="'SF Mono', monospace" font-size="10" fill="#8b949e">Feature Request #10354 #11604 仍 OPEN (P3)</text>
     </g>
-    <line x1="50" y1="34" x2="1150" y2="34" stroke="#21262d" stroke-width="0.5"/>
+    <line x1="56" y1="336" x2="1144" y2="336" stroke="#f0f3f6" stroke-width="1"/>
 
     <!-- Defect 5 -->
-    <g transform="translate(50, 320)">
-      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">5</text>
-      <text x="30" y="0" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3">记忆=结构化日志</text>
-      <rect x="400" y="-12" width="80" height="22" rx="4" fill="#d2992230"/>
-      <text x="440" y="4" font-family="'Inter', sans-serif" font-size="12" fill="#d29922" text-anchor="middle" font-weight="600">部分修复</text>
-      <text x="500" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">新增多 provider（Honcho/RetainDB/Holographic）</text>
-      <text x="500" y="20" font-family="'Inter', sans-serif" font-size="12" fill="#6e7681">核心"持久化+回注"机制未变</text>
+    <g transform="translate(56, 346)">
+      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">5</text>
+      <text x="32" y="0" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="500">记忆=结构化日志</text>
+      <rect x="280" y="-12" width="72" height="22" rx="4" fill="#fff8c5"/>
+      <text x="316" y="4" font-family="system-ui, sans-serif" font-size="11" fill="#9a6700" text-anchor="middle" font-weight="600">部分修复</text>
+      <text x="400" y="0" font-family="system-ui, sans-serif" font-size="12" fill="#656d76">新增多 provider（Honcho/RetainDB/Holographic）</text>
+      <text x="400" y="18" font-family="'SF Mono', monospace" font-size="10" fill="#8b949e">核心"持久化+回注"机制未变</text>
     </g>
-    <line x1="50" y1="34" x2="1150" y2="34" stroke="#21262d" stroke-width="0.5"/>
+    <line x1="56" y1="398" x2="1144" y2="398" stroke="#f0f3f6" stroke-width="1"/>
 
     <!-- Defect 6 -->
-    <g transform="translate(50, 375)">
-      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">6</text>
-      <text x="30" y="0" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3">注入防护缺失</text>
-      <rect x="400" y="-12" width="72" height="22" rx="4" fill="#8957e530"/>
-      <text x="436" y="4" font-family="'Inter', sans-serif" font-size="12" fill="#8957e5" text-anchor="middle" font-weight="600">无变化</text>
-      <text x="500" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">evolution 删除后不可触达，但插件系统仍无扫描</text>
+    <g transform="translate(56, 408)">
+      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">6</text>
+      <text x="32" y="0" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="500">注入防护缺失</text>
+      <rect x="280" y="-12" width="56" height="22" rx="4" fill="#f0f3f6"/>
+      <text x="308" y="4" font-family="system-ui, sans-serif" font-size="11" fill="#656d76" text-anchor="middle" font-weight="600">无变化</text>
+      <text x="400" y="0" font-family="system-ui, sans-serif" font-size="12" fill="#656d76">evolution 删除后不可触达，但插件系统仍无扫描</text>
     </g>
-    <line x1="50" y1="34" x2="1150" y2="34" stroke="#21262d" stroke-width="0.5"/>
+    <line x1="56" y1="450" x2="1144" y2="450" stroke="#f0f3f6" stroke-width="1"/>
 
     <!-- Defect 7 -->
-    <g transform="translate(50, 420)">
-      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">7</text>
-      <text x="30" y="0" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3">Pipeline 可靠性</text>
-      <rect x="400" y="-12" width="90" height="22" rx="4" fill="#8957e530"/>
-      <text x="445" y="4" font-family="'Inter', sans-serif" font-size="12" fill="#8957e5" text-anchor="middle" font-weight="600">代码删除</text>
-      <text x="500" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#6e7681">随 evolution 模块移除，不再适用</text>
+    <g transform="translate(56, 460)">
+      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">7</text>
+      <text x="32" y="0" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="500">Pipeline 可靠性</text>
+      <rect x="280" y="-12" width="72" height="22" rx="4" fill="#fbefff"/>
+      <text x="316" y="4" font-family="system-ui, sans-serif" font-size="11" fill="#8250df" text-anchor="middle" font-weight="600">代码删除</text>
+      <text x="400" y="0" font-family="system-ui, sans-serif" font-size="12" fill="#656d76">随 evolution 模块移除，不再适用</text>
     </g>
-    <line x1="50" y1="34" x2="1150" y2="34" stroke="#21262d" stroke-width="0.5"/>
+    <line x1="56" y1="502" x2="1144" y2="502" stroke="#f0f3f6" stroke-width="1"/>
 
     <!-- Defect 8 -->
-    <g transform="translate(50, 465)">
-      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">8</text>
-      <text x="30" y="0" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3">插件零安全检查</text>
-      <rect x="400" y="-12" width="48" height="22" rx="4" fill="#f8514930"/>
-      <text x="424" y="4" font-family="'Inter', sans-serif" font-size="12" fill="#f85149" text-anchor="middle" font-weight="600">未修复</text>
-      <text x="500" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">插件系统扩展（可注册命令/阻止工具）但安全扫描仍 opt-in</text>
+    <g transform="translate(56, 512)">
+      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">8</text>
+      <text x="32" y="0" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="500">插件零安全检查</text>
+      <rect x="280" y="-12" width="56" height="22" rx="4" fill="#ffebe9"/>
+      <text x="308" y="4" font-family="system-ui, sans-serif" font-size="11" fill="#cf222e" text-anchor="middle" font-weight="600">未修复</text>
+      <text x="400" y="0" font-family="system-ui, sans-serif" font-size="12" fill="#656d76">插件扩展（可注册命令/阻止工具）但安全扫描仍 opt-in</text>
     </g>
-    <line x1="50" y1="34" x2="1150" y2="34" stroke="#21262d" stroke-width="0.5"/>
+    <line x1="56" y1="554" x2="1144" y2="554" stroke="#f0f3f6" stroke-width="1"/>
 
     <!-- Defect 9 -->
-    <g transform="translate(50, 510)">
-      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">9</text>
-      <text x="30" y="0" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3">信任策略不对等</text>
-      <rect x="400" y="-12" width="48" height="22" rx="4" fill="#f8514930"/>
-      <text x="424" y="4" font-family="'Inter', sans-serif" font-size="12" fill="#f85149" text-anchor="middle" font-weight="600">未修复</text>
-      <text x="500" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">skills.guard_agent_created 新增但默认关闭</text>
+    <g transform="translate(56, 564)">
+      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">9</text>
+      <text x="32" y="0" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="500">信任策略不对等</text>
+      <rect x="280" y="-12" width="56" height="22" rx="4" fill="#ffebe9"/>
+      <text x="308" y="4" font-family="system-ui, sans-serif" font-size="11" fill="#cf222e" text-anchor="middle" font-weight="600">未修复</text>
+      <text x="400" y="0" font-family="system-ui, sans-serif" font-size="12" fill="#656d76">skills.guard_agent_created 新增但默认关闭</text>
     </g>
-    <line x1="50" y1="34" x2="1150" y2="34" stroke="#21262d" stroke-width="0.5"/>
+    <line x1="56" y1="606" x2="1144" y2="606" stroke="#f0f3f6" stroke-width="1"/>
 
     <!-- Defect 10 -->
-    <g transform="translate(50, 555)">
-      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e">10</text>
-      <text x="30" y="0" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3">API 无认证</text>
-      <rect x="400" y="-12" width="48" height="22" rx="4" fill="#f8514930"/>
-      <text x="424" y="4" font-family="'Inter', sans-serif" font-size="12" fill="#f85149" text-anchor="middle" font-weight="600">未修复</text>
-      <text x="500" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">本地 API Server 仍无认证，Issue #2512 仍 OPEN</text>
+    <g transform="translate(56, 616)">
+      <text x="0" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">10</text>
+      <text x="32" y="0" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="500">API 无认证</text>
+      <rect x="280" y="-12" width="56" height="22" rx="4" fill="#ffebe9"/>
+      <text x="308" y="4" font-family="system-ui, sans-serif" font-size="11" fill="#cf222e" text-anchor="middle" font-weight="600">未修复</text>
+      <text x="400" y="0" font-family="system-ui, sans-serif" font-size="12" fill="#656d76">本地 API Server 仍无认证，Issue #2512 仍 OPEN</text>
     </g>
 
     <!-- Legend -->
-    <line x1="50" y1="595" x2="1150" y2="595" stroke="#30363d" stroke-width="1"/>
-    <g transform="translate(50, 620)">
-      <rect x="0" y="-10" width="12" height="12" rx="3" fill="#f85149"/>
-      <text x="22" y="1" font-family="'SF Mono', monospace" font-size="11" fill="#f85149">未修复</text>
-      <rect x="80" y="-10" width="12" height="12" rx="3" fill="#d29922"/>
-      <text x="102" y="1" font-family="'SF Mono', monospace" font-size="11" fill="#d29922">部分修复</text>
-      <rect x="180" y="-10" width="12" height="12" rx="3" fill="#8957e5"/>
-      <text x="202" y="1" font-family="'SF Mono', monospace" font-size="11" fill="#8957e5">代码删除</text>
+    <line x1="56" y1="660" x2="1144" y2="660" stroke="#d8dee4" stroke-width="1"/>
+    <g transform="translate(56, 680)">
+      <rect x="0" y="-10" width="12" height="12" rx="3" fill="#cf222e"/>
+      <text x="18" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#cf222e">未修复</text>
+      <rect x="76" y="-10" width="12" height="12" rx="3" fill="#bf8700"/>
+      <text x="94" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#bf8700">部分修复</text>
+      <rect x="172" y="-10" width="12" height="12" rx="3" fill="#8250df"/>
+      <text x="190" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#8250df">代码删除</text>
+      <rect x="268" y="-10" width="12" height="12" rx="3" fill="#656d76"/>
+      <text x="286" y="0" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">无变化</text>
     </g>
   </g>
 
-  <!-- ═══════════════════════════════════════ CARD 4: 这 10 天到底做了什么 ═══════════════════════════════════════ -->
-  <g transform="translate(0, 1510)">
-    <rect x="30" y="0" width="1140" height="530" rx="12" fill="#161b22" stroke="#1f6feb40" stroke-width="1.5"/>
+  <!-- ══════════════════════ CARD 4: 这 10 天到底做了什么 ══════════════════════ -->
+  <g transform="translate(0, 1796)">
+    <rect x="32" y="0" width="1136" height="500" rx="12" fill="#ffffff" filter="url(#cardShadow)"/>
 
-    <rect x="50" y="20" width="220" height="28" rx="14" fill="#1f6feb20"/>
-    <text x="160" y="39" font-family="'Inter', sans-serif" font-size="13" fill="#1f6feb" text-anchor="middle" font-weight="700">那这 10 天到底做了什么？</text>
+    <!-- Section badge -->
+    <rect x="56" y="24" width="168" height="28" rx="14" fill="#ddf4ff"/>
+    <text x="140" y="43" font-family="system-ui, sans-serif" font-size="12" fill="#0969da" text-anchor="middle" font-weight="600">那这 10 天做了什么？</text>
 
-    <text x="50" y="72" font-family="'Inter', sans-serif" font-size="13" fill="#8b949e" font-weight="600">761 个合并 PR，主要方向：</text>
+    <text x="56" y="76" font-family="system-ui, sans-serif" font-size="13" fill="#656d76" font-weight="600">761 个合并 PR，主要方向：</text>
 
-    <!-- Did items -->
-    <g transform="translate(50, 90)">
-      <!-- 1 -->
+    <!-- Did items - 2 columns -->
+    <g transform="translate(56, 96)">
+      <!-- Column 1 -->
       <g>
-        <rect x="0" y="0" width="26" height="26" rx="6" fill="#1f6feb30"/>
-        <text x="13" y="18" font-family="'SF Mono', monospace" font-size="13" fill="#1f6feb" text-anchor="middle" font-weight="700">1</text>
-        <text x="38" y="6" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3" font-weight="600">React/Ink TUI 完全重写</text>
-        <text x="38" y="24" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">~310 次提交，多行编辑、斜杠命令补全、流式输出、子代理覆盖层</text>
+        <g>
+          <rect x="0" y="0" width="24" height="24" rx="6" fill="#ddf4ff"/>
+          <text x="12" y="17" font-family="'SF Mono', monospace" font-size="12" fill="#0969da" text-anchor="middle" font-weight="700">1</text>
+          <text x="34" y="6" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="600">React/Ink TUI 完全重写</text>
+          <text x="34" y="22" font-family="system-ui, sans-serif" font-size="11" fill="#656d76">~310 次提交，多行编辑、斜杠命令补全、流式输出</text>
+        </g>
+        <g transform="translate(0, 56)">
+          <rect x="0" y="0" width="24" height="24" rx="6" fill="#ddf4ff"/>
+          <text x="12" y="17" font-family="'SF Mono', monospace" font-size="12" fill="#0969da" text-anchor="middle" font-weight="700">2</text>
+          <text x="34" y="6" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="600">Transport ABC 抽象层</text>
+          <text x="34" y="22" font-family="system-ui, sans-serif" font-size="11" fill="#656d76">提取 4 种 Transport（Anthropic/Chat/Responses/Bedrock）</text>
+        </g>
+        <g transform="translate(0, 112)">
+          <rect x="0" y="0" width="24" height="24" rx="6" fill="#ddf4ff"/>
+          <text x="12" y="17" font-family="'SF Mono', monospace" font-size="12" fill="#0969da" text-anchor="middle" font-weight="700">3</text>
+          <text x="34" y="6" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="600">5 个新 LLM Provider</text>
+          <text x="34" y="22" font-family="system-ui, sans-serif" font-size="11" fill="#656d76">NVIDIA NIM、Arcee AI、Gemini OAuth、Vercel ai-gateway</text>
+        </g>
       </g>
-      <!-- 2 -->
-      <g transform="translate(0, 62)">
-        <rect x="0" y="0" width="26" height="26" rx="6" fill="#1f6feb30"/>
-        <text x="13" y="18" font-family="'SF Mono', monospace" font-size="13" fill="#1f6feb" text-anchor="middle" font-weight="700">2</text>
-        <text x="38" y="6" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3" font-weight="600">Transport ABC 抽象层</text>
-        <text x="38" y="24" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">从 run_agent.py 提取 4 种 Transport（Anthropic/ChatCompletions/ResponsesApi/Bedrock）</text>
-      </g>
-      <!-- 3 -->
-      <g transform="translate(0, 124)">
-        <rect x="0" y="0" width="26" height="26" rx="6" fill="#1f6feb30"/>
-        <text x="13" y="18" font-family="'SF Mono', monospace" font-size="13" fill="#1f6feb" text-anchor="middle" font-weight="700">3</text>
-        <text x="38" y="6" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3" font-weight="600">5 个新 LLM Provider</text>
-        <text x="38" y="24" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">NVIDIA NIM、Arcee AI、Step Plan、Gemini CLI OAuth、Vercel ai-gateway</text>
-      </g>
-      <!-- 4 -->
-      <g transform="translate(0, 186)">
-        <rect x="0" y="0" width="26" height="26" rx="6" fill="#1f6feb30"/>
-        <text x="13" y="18" font-family="'SF Mono', monospace" font-size="13" fill="#1f6feb" text-anchor="middle" font-weight="700">4</text>
-        <text x="38" y="6" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3" font-weight="600">QQBot — 第 17 个消息平台</text>
-        <text x="38" y="24" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">网关统一管理 Telegram/Discord/Slack/QQ 等 17 个平台</text>
-      </g>
-      <!-- 5 -->
-      <g transform="translate(0, 248)">
-        <rect x="0" y="0" width="26" height="26" rx="6" fill="#1f6feb30"/>
-        <text x="13" y="18" font-family="'SF Mono', monospace" font-size="13" fill="#1f6feb" text-anchor="middle" font-weight="700">5</text>
-        <text x="38" y="6" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3" font-weight="600">插件系统 + /steer 命令</text>
-        <text x="38" y="24" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">可注册命令、阻止工具、重写结果；运行中引导 agent</text>
-      </g>
-      <!-- 6 -->
-      <g transform="translate(0, 310)">
-        <rect x="0" y="0" width="26" height="26" rx="6" fill="#1f6feb30"/>
-        <text x="13" y="18" font-family="'SF Mono', monospace" font-size="13" fill="#1f6feb" text-anchor="middle" font-weight="700">6</text>
-        <text x="38" y="6" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3" font-weight="600">TOOL_USE_ENFORCEMENT</text>
-        <text x="38" y="24" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">Prompt 层修补 excuses mode：必须用工具不能只说不做</text>
+      <!-- Column 2 -->
+      <g transform="translate(544, 0)">
+        <g>
+          <rect x="0" y="0" width="24" height="24" rx="6" fill="#ddf4ff"/>
+          <text x="12" y="17" font-family="'SF Mono', monospace" font-size="12" fill="#0969da" text-anchor="middle" font-weight="700">4</text>
+          <text x="34" y="6" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="600">QQBot — 第 17 个消息平台</text>
+          <text x="34" y="22" font-family="system-ui, sans-serif" font-size="11" fill="#656d76">网关统一管理 17 个平台（Telegram/Discord/Slack/QQ）</text>
+        </g>
+        <g transform="translate(0, 56)">
+          <rect x="0" y="0" width="24" height="24" rx="6" fill="#ddf4ff"/>
+          <text x="12" y="17" font-family="'SF Mono', monospace" font-size="12" fill="#0969da" text-anchor="middle" font-weight="700">5</text>
+          <text x="34" y="6" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="600">插件系统 + /steer 命令</text>
+          <text x="34" y="22" font-family="system-ui, sans-serif" font-size="11" fill="#656d76">可注册命令、阻止工具、重写结果；运行中引导 agent</text>
+        </g>
+        <g transform="translate(0, 112)">
+          <rect x="0" y="0" width="24" height="24" rx="6" fill="#ddf4ff"/>
+          <text x="12" y="17" font-family="'SF Mono', monospace" font-size="12" fill="#0969da" text-anchor="middle" font-weight="700">6</text>
+          <text x="34" y="6" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328" font-weight="600">TOOL_USE_ENFORCEMENT</text>
+          <text x="34" y="22" font-family="system-ui, sans-serif" font-size="11" fill="#656d76">Prompt 层修补 excuses mode：必须用工具不能只说不做</text>
+        </g>
       </g>
     </g>
 
     <!-- Didn't do -->
-    <line x1="50" y1="375" x2="1150" y2="375" stroke="#30363d" stroke-width="1"/>
-    <text x="50" y="400" font-family="'Inter', sans-serif" font-size="13" fill="#8b949e" font-weight="600">没有做的（5 项）：</text>
+    <line x1="56" y1="290" x2="1144" y2="290" stroke="#d8dee4" stroke-width="1"/>
+    <text x="56" y="316" font-family="system-ui, sans-serif" font-size="13" fill="#656d76" font-weight="600">没有做的：</text>
 
-    <g transform="translate(50, 418)">
+    <g transform="translate(56, 336)">
       <g>
-        <rect x="0" y="0" width="26" height="26" rx="6" fill="#f8514930"/>
-        <text x="13" y="18" font-family="'SF Mono', monospace" font-size="13" fill="#f85149" text-anchor="middle" font-weight="700">✕</text>
-        <text x="38" y="18" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3">Token 效率优化 — 全量注入架构未改，5 个相关 Issue 全部 OPEN</text>
+        <rect x="0" y="0" width="24" height="24" rx="6" fill="#ffebe9"/>
+        <text x="12" y="17" font-family="system-ui, sans-serif" font-size="11" fill="#cf222e" text-anchor="middle" font-weight="700">X</text>
+        <text x="34" y="16" font-family="system-ui, sans-serif" font-size="12" fill="#1f2328">Token 效率优化 — 全量注入架构未改，5 个相关 Issue 全部 OPEN</text>
       </g>
-      <g transform="translate(0, 56)">
-        <rect x="0" y="0" width="26" height="26" rx="6" fill="#f8514930"/>
-        <text x="13" y="18" font-family="'SF Mono', monospace" font-size="13" fill="#f85149" text-anchor="middle" font-weight="700">✕</text>
-        <text x="38" y="18" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3">自修改确认机制 — "patch it immediately" 原文一字未改</text>
+      <g transform="translate(0, 36)">
+        <rect x="0" y="0" width="24" height="24" rx="6" fill="#ffebe9"/>
+        <text x="12" y="17" font-family="system-ui, sans-serif" font-size="11" fill="#cf222e" text-anchor="middle" font-weight="700">X</text>
+        <text x="34" y="16" font-family="system-ui, sans-serif" font-size="12" fill="#1f2328">自修改确认机制 — "patch it immediately" 原文一字未改</text>
       </g>
-      <g transform="translate(0, 112)">
-        <rect x="0" y="0" width="26" height="26" rx="6" fill="#f8514930"/>
-        <text x="13" y="18" font-family="'SF Mono', monospace" font-size="13" fill="#f85149" text-anchor="middle" font-weight="700">✕</text>
-        <text x="38" y="18" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3">自进化实现 — 代码被删除而非修复</text>
+      <g transform="translate(0, 72)">
+        <rect x="0" y="0" width="24" height="24" rx="6" fill="#ffebe9"/>
+        <text x="12" y="17" font-family="system-ui, sans-serif" font-size="11" fill="#cf222e" text-anchor="middle" font-weight="700">X</text>
+        <text x="34" y="16" font-family="system-ui, sans-serif" font-size="12" fill="#1f2328">自进化实现 — 代码被删除而非修复；架构级债务偿还投入为零</text>
       </g>
-      <g transform="translate(0, 168)">
-        <rect x="0" y="0" width="26" height="26" rx="6" fill="#f8514930"/>
-        <text x="13" y="18" font-family="'SF Mono', monospace" font-size="13" fill="#f85149" text-anchor="middle" font-weight="700">✕</text>
-        <text x="38" y="18" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3">架构级债务偿还 — 纵向深耕投入为零</text>
+      <g transform="translate(544, 0)">
+        <rect x="0" y="0" width="24" height="24" rx="6" fill="#ffebe9"/>
+        <text x="12" y="17" font-family="system-ui, sans-serif" font-size="11" fill="#cf222e" text-anchor="middle" font-weight="700">X</text>
+        <text x="34" y="16" font-family="system-ui, sans-serif" font-size="12" fill="#1f2328">安全加固 — 插件系统安全扫描仍 opt-in，无默认启用</text>
       </g>
-      <g transform="translate(0, 224)">
-        <rect x="0" y="0" width="26" height="26" rx="6" fill="#f8514930"/>
-        <text x="13" y="18" font-family="'SF Mono', monospace" font-size="13" fill="#f85149" text-anchor="middle" font-weight="700">✕</text>
-        <text x="38" y="18" font-family="'Inter', sans-serif" font-size="13" fill="#e6edf3">Windows 原生支持 — 官方文档仍写 Not supported</text>
+      <g transform="translate(544, 36)">
+        <rect x="0" y="0" width="24" height="24" rx="6" fill="#ffebe9"/>
+        <text x="12" y="17" font-family="system-ui, sans-serif" font-size="11" fill="#cf222e" text-anchor="middle" font-weight="700">X</text>
+        <text x="34" y="16" font-family="system-ui, sans-serif" font-size="12" fill="#1f2328">Windows 原生支持 — 官方文档仍写 Not supported</text>
       </g>
     </g>
   </g>
 
-  <!-- ═══════════════════════════════════════ CARD 5: 结论 ═══════════════════════════════════════ -->
-  <g transform="translate(0, 2070)">
-    <rect x="30" y="0" width="1140" height="350" rx="12" fill="#161b22" stroke="#58a6ff40" stroke-width="1.5"/>
+  <!-- ══════════════════════ CARD 5: 结论 ══════════════════════ -->
+  <g transform="translate(0, 2316)">
+    <rect x="32" y="0" width="1136" height="500" rx="12" fill="#ffffff" filter="url(#cardShadow)"/>
 
-    <rect x="50" y="20" width="120" height="28" rx="14" fill="#58a6ff20"/>
-    <text x="110" y="39" font-family="'Inter', sans-serif" font-size="13" fill="#58a6ff" text-anchor="middle" font-weight="700">结论</text>
+    <!-- Section badge -->
+    <rect x="56" y="24" width="72" height="28" rx="14" fill="#dafbe1"/>
+    <text x="92" y="43" font-family="system-ui, sans-serif" font-size="12" fill="#1a7f37" text-anchor="middle" font-weight="600">结论</text>
 
-    <line x1="50" y1="65" x2="1150" y2="65" stroke="#30363d" stroke-width="1"/>
+    <line x1="56" y1="68" x2="1144" y2="68" stroke="#d8dee4" stroke-width="1"/>
 
-    <text x="50" y="95" font-family="'Inter', sans-serif" font-size="18" fill="#e6edf3" font-weight="700">能量方向：横向扩张，而非纵向深耕</text>
+    <text x="56" y="100" font-family="system-ui, sans-serif" font-size="20" fill="#1f2328" font-weight="800">能量方向：横向扩张，而非纵向深耕</text>
 
-    <g transform="translate(50, 120)">
-      <rect x="0" y="0" width="540" height="120" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
-      <text x="15" y="22" font-family="'Inter', sans-serif" font-size="12" fill="#1f6feb" font-weight="700">做了</text>
-      <text x="15" y="44" font-family="'Inter', sans-serif" font-size="12" fill="#c9d1d9">TUI 重写、Transport 层、5 新 Provider、QQBot、</text>
-      <text x="15" y="64" font-family="'Inter', sans-serif" font-size="12" fill="#c9d1d9">17 个平台、插件扩展、/steer 命令</text>
-      <text x="15" y="90" font-family="'SF Mono', monospace" font-size="11" fill="#6e7681">761 PR merged · 224K lines inserted</text>
+    <!-- Two columns: Did vs Didn't -->
+    <g transform="translate(56, 120)">
+      <rect x="0" y="0" width="530" height="140" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="1"/>
+      <text x="16" y="26" font-family="system-ui, sans-serif" font-size="14" fill="#0969da" font-weight="700">做了</text>
+      <text x="16" y="52" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328">TUI 重写、Transport 层抽象、5 新 Provider、</text>
+      <text x="16" y="74" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328">QQBot、17 个平台、插件扩展、/steer 命令</text>
+      <text x="16" y="102" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328">TOOL_USE_ENFORCEMENT</text>
+      <text x="16" y="128" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">761 PR merged · 224K lines</text>
+
+      <rect x="558" y="0" width="530" height="140" rx="8" fill="#ffebe9" stroke="#cf222e" stroke-width="1"/>
+      <text x="574" y="26" font-family="system-ui, sans-serif" font-size="14" fill="#cf222e" font-weight="700">没做</text>
+      <text x="574" y="52" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328">Token 效率、自修改确认、自进化实现、</text>
+      <text x="574" y="74" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328">架构债务偿还、安全加固、Windows 支持</text>
+      <text x="574" y="102" font-family="system-ui, sans-serif" font-size="13" fill="#1f2328">API 认证、注入防护</text>
+      <text x="574" y="128" font-family="'SF Mono', monospace" font-size="11" fill="#656d76">5+ Issues OPEN · 0 architectural fixes</text>
     </g>
-    <g transform="translate(560, 120)">
-      <rect x="0" y="0" width="540" height="120" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
-      <text x="15" y="22" font-family="'Inter', sans-serif" font-size="12" fill="#f85149" font-weight="700">没做</text>
-      <text x="15" y="44" font-family="'Inter', sans-serif" font-size="12" fill="#c9d1d9">Token 效率、自修改确认、自进化实现、</text>
-      <text x="15" y="64" font-family="'Inter', sans-serif" font-size="12" fill="#c9d1d9">架构债务、安全加固、Windows 支持</text>
-      <text x="15" y="90" font-family="'SF Mono', monospace" font-size="11" fill="#6e681">5 Issues OPEN · 0 architectural fixes</text>
-    </g>
 
-    <!-- Final callout -->
-    <rect x="50" y="270" width="1100" height="60" rx="8" fill="#58a6ff10"/>
-    <text x="600" y="296" font-family="'Inter', sans-serif" font-size="14" fill="#58a6ff" text-anchor="middle" font-weight="700">项目在优化增长指标（Star、平台数、Provider 数），而非质量指标（bug 修复率、token 效率）</text>
-    <text x="600" y="316" font-family="'SF Mono', monospace" font-size="11" fill="#8b949e" text-anchor="middle">横向扩张的同时，纵向债务持续累积。营销与代码现实的差距在扩大而非缩小。</text>
+    <!-- Core insight -->
+    <rect x="56" y="290" width="1088" height="56" rx="8" fill="#f6f8fa" stroke="#d8dee4" stroke-width="1"/>
+    <text x="600" y="316" font-family="system-ui, sans-serif" font-size="15" fill="#1f2328" text-anchor="middle" font-weight="700">项目在优化增长指标（Star、平台数、Provider 数），而非质量指标（bug 修复率、token 效率）</text>
+    <text x="600" y="336" font-family="'SF Mono', monospace" font-size="11" fill="#656d76" text-anchor="middle">横向扩张的同时，纵向债务持续累积。营销与代码现实的差距在扩大而非缩小。</text>
+
+    <!-- Final verdict -->
+    <g transform="translate(56, 370)">
+      <rect x="0" y="0" width="1088" height="100" rx="10" fill="#f6f8fa" stroke="#d8dee4" stroke-width="1"/>
+      <text x="544" y="30" font-family="system-ui, sans-serif" font-size="14" fill="#656d76" text-anchor="middle">一句话总结</text>
+      <text x="544" y="60" font-family="system-ui, sans-serif" font-size="18" fill="#1f2328" text-anchor="middle" font-weight="800">10 天，761 个 PR，0 项核心缺陷被真正修复。</text>
+      <text x="544" y="84" font-family="system-ui, sans-serif" font-size="13" fill="#656d76" text-anchor="middle">其中 3 项的"修复方式"是删除整个功能模块。</text>
+    </g>
   </g>
 
-  <!-- Footer -->
-  <g transform="translate(0, 2460)">
-    <line x1="40" y1="0" x2="1160" y2="0" stroke="#21262d" stroke-width="1"/>
-    <text x="40" y="24" font-family="'SF Mono', monospace" font-size="11" fill="#484f58">来源</text>
-    <text x="40" y="44" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">GitHub Issue #4379 #6839 #11115 #13332 #11425 #10354 #11604（全部 OPEN）；源码核实 prompt_builder.py / skill_manager_tool.py</text>
-    <text x="40" y="68" font-family="'SF Mono', monospace" font-size="11" fill="#484f58">仓库</text>
-    <text x="40" y="88" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">NousResearch/hermes-agent · v0.11.0 (2026-04-23) · github.com/NousResearch/hermes-agent</text>
-    <text x="40" y="120" font-family="'SF Mono', monospace" font-size="11" fill="#484f58">审计方</text>
-    <text x="40" y="140" font-family="'Inter', sans-serif" font-size="12" fill="#8b949e">github.com/halflifezyf2680/DeepResearchAuditReport · 审计日期 2026-04-17 · 追踪日期 2026-04-27</text>
+  <!-- ══════════════════════ FOOTER ══════════════════════ -->
+  <g transform="translate(0, 2730)">
+    <line x1="56" y1="0" x2="1144" y2="0" stroke="#d8dee4" stroke-width="1"/>
+    <text x="56" y="24" font-family="'SF Mono', monospace" font-size="10" fill="#656d76" font-weight="600">来源</text>
+    <text x="100" y="24" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">GitHub Issue #4379 #6839 #11115 #13332 #11425 #10354 #11604（全部 OPEN）· 源码核实 prompt_builder.py / skill_manager_tool.py</text>
+    <text x="56" y="44" font-family="'SF Mono', monospace" font-size="10" fill="#656d76" font-weight="600">仓库</text>
+    <text x="100" y="44" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">NousResearch/hermes-agent · v0.11.0 (2026-04-23)</text>
+    <text x="700" y="44" font-family="'SF Mono', monospace" font-size="10" fill="#656d76" font-weight="600">审计方</text>
+    <text x="744" y="44" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">github.com/halflifezyf2680/DeepResearchAuditReport</text>
+    <text x="56" y="64" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e">审计日期 2026-04-17 · 追踪日期 2026-04-27</text>
   </g>
 
 </svg>
